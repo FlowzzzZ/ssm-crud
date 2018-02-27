@@ -11,7 +11,31 @@ public class Employee {
 
     private Integer dId;
     
-    private Department department;
+    //希望查询员工的时候 部门信息也是查询 好的
+    public Department getDepartment() {
+		return department;
+	}
+
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(Integer empId, String empName, String gender, String email, Integer dId) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.gender = gender;
+		this.email = email;
+		this.dId = dId;
+		
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
+	private Department department;
 
     public Integer getEmpId() {
         return empId;

@@ -13,6 +13,10 @@
   	
   	
   	</typeAliases>
+  	
+  	<plugins>
+  		<plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+  	</plugins>
   
   
   

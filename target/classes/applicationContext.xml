@@ -36,7 +36,7 @@
 <!--===================================配置mybatis整合==================================  -->
 
 <!-- 创建sqlSessionFactory -->
-<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactoryBean">
+<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
 	<!--指定mybatis全局配置的位置  -->
 	<property name="configLocation" value="classpath:mybatis-config.xml"></property>
     <!--数据源 -->
@@ -50,6 +50,12 @@
 <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 	<!-- 扫描所有dao接口的实现加入到ioc容器中 -->
 	<property name="basePackage" value="com.atguigu.crud.dao"></property>
+</bean>
+
+<!--配置一个可以执行批量的sqlsession  -->
+<bean id="sqlsession" class="org.mybatis.spring.SqlSessionTemplate">
+	<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
+	<constructor-arg name="executorType" value="BATCH"></constructor-arg>
 </bean>
 
 <!-- ======================事务控制的配置============================ -->
