@@ -13,7 +13,7 @@
   
   <!--配置数据库连接信息  -->
     <jdbcConnection
-        driverClass="com.mysql.jdbc.Driver"
+        driverClass="com.mysql.jd.bc.Driver"
         connectionURL="jdbc:mysql://localhost:3306/ssm_crud"
         userId="root"
         password="1234">

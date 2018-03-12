@@ -47,7 +47,7 @@ public class MvcTest {
 		PageInfo pi=(PageInfo) request.getAttribute("pageInfo");
 		System.out.println("当前页码："+pi.getPageNum());
 		System.out.println("总页码："+pi.getPages());
-		System.out.println("当记录数："+pi.getTotal());
+		System.out.println("当记录数："+pi.getTotal());  
 		System.out.println("在页面需要连续显示的页码");
 		int[] nums=pi.getNavigatepageNums();
 		for(int i:nums){

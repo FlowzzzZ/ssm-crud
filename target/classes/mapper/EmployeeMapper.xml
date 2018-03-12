@@ -84,7 +84,7 @@
   </sql>
   
   <sql id="WithDept_Column_List">
-  	e.emp_id, e.emp_name, e.gender, e.email, e.d_id,d.dept_id,d.dept_name
+  	 e.emp_id,e.emp_name, e.gender, e.email, e.d_id,d.dept_id,d.dept_name
   </sql>
   <!-- List<Employee> selectByExampleWithDept(EmployeeExample example);
 
@@ -95,9 +95,9 @@
     <if test="distinct">
       distinct
     </if>
-    <include refid="Base_Column_List" />
+    <include refid="WithDept_Column_List" />
     FROM tbl_emp e
-LEFT JOIN tbl_dept d ON e.d_id=d.dept_id
+left join tbl_dept d ON e.d_id=d.dept_id order by e.emp_id 
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -105,20 +105,21 @@ LEFT JOIN tbl_dept d ON e.d_id=d.dept_id
       order by ${orderByClause}
     </if>
   </select> 
-  <select id="selectByPrimaryKeyWithDept">
+  <select id="selectByPrimaryKeyWithDept" resultMap="withDeptResultMap">
   	select 
-    <include refid="Base_Column_List" />
+    <include refid="WithDept_Column_List" />
     FROM tbl_emp e
-LEFT JOIN tbl_dept d ON e.d_id=d.dept_id
+left join tbl_dept d ON e.d_id=d.dept_id 
     where emp_id = #{empId,jdbcType=INTEGER}
+    
   </select> 
-  <select id="selectByExample" parameterType="com.atguigu.crud.bean.EmployeeExample" resultMap="BaseResultMap">
+  <select id="selectByExample"  resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from tbl_emp
+    FROM tbl_emp
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -126,10 +127,10 @@ LEFT JOIN tbl_dept d ON e.d_id=d.dept_id
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey"  resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from tbl_emp
+    FROM tbl_emp 
     where emp_id = #{empId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">

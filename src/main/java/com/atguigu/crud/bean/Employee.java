@@ -1,20 +1,27 @@
 package com.atguigu.crud.bean;
 
+import javax.validation.constraints.Pattern;
+
 public class Employee {
     private Integer empId;
-
+    
+    @Pattern(regexp="(^[a-zA-Z0-9_-]{6,16}$)|(^[\u2E80-\u9FFF]{2,5})",message="用户名必须是6-16位数字和字母的组合或2-5位中文")
     private String empName;
 
     private String gender;
-
+    
+    //email
+    @Pattern(regexp="^[a-z\\d]+(\\.[a-z\\d]+)*@([\\da-z](-[\\da-z])?)+(\\.{1,2}[a-z]+)+$",message="邮箱格式不正确")
     private String email;
 
     private Integer dId;
     
+   
+    
     //希望查询员工的时候 部门信息也是查询 好的
-    public Department getDepartment() {
-		return department;
-	}
+    private Department department;
+    
+   
 
 	public Employee() {
 		super();
@@ -29,13 +36,18 @@ public class Employee {
 		this.email = email;
 		this.dId = dId;
 		
+		
 	}
+	
+	 public Department getDepartment() {
+			return department;
+		}
 
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
 
-	private Department department;
+	
 
     public Integer getEmpId() {
         return empId;

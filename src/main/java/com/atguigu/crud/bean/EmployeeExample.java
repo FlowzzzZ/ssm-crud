@@ -63,7 +63,7 @@ public class EmployeeExample {
         distinct = false;
     }
 
-    protected abstract static class GeneratedCriteria {
+    public abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
 
         protected GeneratedCriteria() {

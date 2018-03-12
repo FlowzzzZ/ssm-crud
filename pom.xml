@@ -27,6 +27,24 @@
 </dependency>
 
 
+<!-- 返回json字符串支持 -->
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.8.8</version>
+</dependency>
+
+
+<!--js303数据校验支持，tomcat7及以上服务器直接导入，7以下：el表达式 额外给服务器lib包中替换新的标准的el  -->
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>5.4.1.Final</version>
+</dependency>
+
+
 <!-- springjdbc -->
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 <dependency>
