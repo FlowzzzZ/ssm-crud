@@ -23,7 +23,7 @@
 		
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-
+	<!--不指定springmvc路径 的配置方法 -->
 	<!-- Map all requests to the DispatcherServlet for handling -->
 	<servlet-mapping>
 		<servlet-name>dispatcherServlet</servlet-name>

@@ -176,7 +176,7 @@ public class EmployeeControlller {
 	
 	
 	//
-	public String getemps(@RequestParam(value="pn",defaultValue="1")Integer pn,
+	/*public String getemps(@RequestParam(value="pn",defaultValue="1")Integer pn,
 			Model model){
 		
 	//引入分页插件
@@ -191,7 +191,7 @@ public class EmployeeControlller {
 	
 	
 	return "list";
-	}
+	}*/
 	
 	
 }

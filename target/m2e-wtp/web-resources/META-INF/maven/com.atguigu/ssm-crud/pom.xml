@@ -8,8 +8,9 @@
   <!-- 引入项目依赖的jar包 -->
   
   
-  <!-- springmvc,spring -->
+ 
 <dependencies>
+
 <!-- pagehelper -->
 <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
 <dependency>
@@ -18,7 +19,7 @@
     <version>5.1.2</version>
 </dependency>
 
-
+ <!-- springmvc,spring -->
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 <dependency>
     <groupId>org.springframework</groupId>
@@ -118,10 +119,12 @@
     <groupId>javax.servlet</groupId>
     <artifactId>javax.servlet-api</artifactId>
     <version>3.0.1</version>
+    <!--已提供 -->
     <scope>provided</scope>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/junit/junit -->
+<!--单元测试  -->
 <dependency>
     <groupId>junit</groupId>
     <artifactId>junit</artifactId>

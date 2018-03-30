@@ -1,0 +1,26 @@
+一
+配置porm
+
+二
+引入前端框架
+
+三
+编写ssm整合的关键配置文件，配置web.xml（
+springmvc->dispatcherServlet-servlet，
+spring->applicationContext(
+1.mybatis-config
+逆向工程mbg.xml
+运行逆向工程文件(java代码+配置文件） MBGTest
+2.mapper）
+
+四
+修改mapper
+
+五
+建立测试类
+MapperTest
+
+
+六 
+单元测试
+MvcTest
